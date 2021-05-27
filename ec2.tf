@@ -4,7 +4,7 @@ resource "aws_instance" "ec2-1" {
   instance_type = "t2.micro"
   security_groups = [aws_security_group.sec.id]
   key_name = "tmstore"
-  subnet_id = module.rus-vpc.public-subnet3-info.id 
+  subnet_id = module.rus-vpc.public-subnet3-info.id #Add to *Module var*
   associate_public_ip_address = true
 }
 
