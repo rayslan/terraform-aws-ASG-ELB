@@ -2,7 +2,7 @@
 
 module "rus-vpc" {
   source = "rayslan/vpc/aws"
-  version = "1.0.6"
+  version = "1.0.10"
 
   tag-vpc-name     = "vpc1"
   region           = "ca-central-1"

@@ -60,14 +60,8 @@ resource "aws_autoscaling_policy" "cpu" {
   
   autoscaling_group_name = aws_autoscaling_group.asg.name
   name = "track cpu usage" #Add to var
-  
-  target_tracking_configuration {
-    predefined_metric_specification {
-      predefined_metric_type = "ASGAverageCPUUtilization"
-    }
-
-    target_value = 40.0
-  }
-
-  
+  scaling_adjustment = 4
+  adjustment_type = "ChangeInCapacity"
+  cooldown = 300
+    
 }
